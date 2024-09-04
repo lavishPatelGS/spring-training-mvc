@@ -1,2 +1,1 @@
-# spring
-spring
+# spring-training-mvc

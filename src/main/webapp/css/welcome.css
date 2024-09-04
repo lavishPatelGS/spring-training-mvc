@@ -1,0 +1,100 @@
+/* styles.css */
+
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.navbar {
+    background-color: #1abc9c; /* Light Green */
+    color: #ffffff; /* White */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.navbar .logo img {
+    height: 40px; /* Adjust as needed */
+}
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+.navbar a {
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover {
+    background-color: #16a085; /* Darker Teal */
+    color: #ffffff;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    margin-top: 60px; /* Adjust based on navbar height */
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50; /* Dark Slate Blue */
+    color: #ecf0f1; /* Light Gray */
+    height: calc(100vh - 60px); /* Adjust based on navbar height */
+    padding-top: 20px;
+    position: fixed;
+    top: 60px; /* Offset by navbar height */
+    left: 0;
+    overflow: auto;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+.sidebar h2 {
+    color: #ecf0f1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #16a085; /* Teal */
+}
+.sidebar a {
+    display: block;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.sidebar a:hover {
+    background-color: #34495e; /* Darker Slate Blue */
+    border-radius: 4px;
+}
+
+.content {
+    margin-left: 240px; /* Sidebar width + some margin */
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+.content h1 {
+    color: #3498db; /* Sky Blue */
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+.content p {
+    color: #7f8c8d; /* Light Gray */
+    font-size: 16px;
+}
