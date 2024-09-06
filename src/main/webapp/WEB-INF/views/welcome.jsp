@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome Page</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/welcome.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/welcome.css">
 </head>
 <body>
 
     <div class="navbar">
         <div class="logo">
-            <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo">
+            <img src="${pageContext.request.contextPath}/resources/images/logo.png" alt="Logo">
         </div>
         <div class="nav-links">
             <%
