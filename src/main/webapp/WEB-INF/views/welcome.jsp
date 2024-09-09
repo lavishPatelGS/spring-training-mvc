@@ -21,7 +21,7 @@
                 if (navLinks != null) {
                     for (Map.Entry<String, String> entry : navLinks.entrySet()) {
             %>
-            <a href="<%= entry.getValue() %>"><%= entry.getKey() %></a>
+            <a href="${pageContext.request.contextPath}<%= entry.getValue() %>/"><%= entry.getKey() %></a>
             <%
                 }
             }
@@ -32,7 +32,7 @@
     <div class="main-container">
 		<div class="sidebar">
 		  <c:forEach var="entry" items="${sideBarLinks}">
-		    <a href="${entry.value}">${entry.key}</a>
+		    <a href="${pageContext.request.contextPath}${entry.value}/">${entry.key}</a>
 		  </c:forEach>
 		</div>
 

@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
 @Controller()
 @RequestMapping("/contact")
@@ -27,15 +28,16 @@ public class ContactUsController {
 		}
 	}
 
+	@RequestMapping(path = "/submitContact", method = RequestMethod.POST)
+	public String submitContact(@ModelAttribute ContactUs contactus) {
+		contactUsService.saveContactUs(contactus);
+		System.out.println("submitContact");
+		return "redirect:/contact/";
+	}
+	
 	@RequestMapping("/")
 	public String home(Model model) {
 		System.out.println("Contact Page");
 		return "contact";
-	}
-
-	@RequestMapping(path = "/submitContact", method = RequestMethod.POST)
-	public String submitContact(@ModelAttribute ContactUs contactus) {
-		contactUsService.saveContactUs(contactus);
-		return "redirect:/contact";
 	}
 }

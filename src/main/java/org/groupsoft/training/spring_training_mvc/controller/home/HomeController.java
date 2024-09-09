@@ -26,7 +26,7 @@ public class HomeController {
 		sideBarLinks.put("Profile", "welcome.jsp");
 		sideBarLinks.put("About Us", "aboutus.jsp");
 		sideBarLinks.put("Terms & Conditions", "terms.jsp");
-		sideBarLinks.put("Contact Us", "contact.jsp");
+		sideBarLinks.put("Contact Us", "/contact");
 		model.addAttribute("sideBarLinks", sideBarLinks);
 
 		System.out.println("Home Page");

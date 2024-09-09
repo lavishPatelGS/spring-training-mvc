@@ -14,8 +14,8 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan("org.groupsoft.training.spring_training_mvc")
 @EnableTransactionManagement
+@ComponentScan("org.groupsoft.training.spring_training_mvc")
 public class AppConfig {
 
 	@Bean

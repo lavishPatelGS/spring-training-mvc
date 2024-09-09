@@ -9,7 +9,8 @@
     <title>Contact Us</title>
 
     <!-- Load Bootstrap 5 CSS from CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
 <body>
     <div class="container my-5">
         <div class="row">
@@ -18,8 +19,23 @@
                 <div class="card shadow-lg p-4">
                     <h2 class="text-center">Contact Us</h2>
                     <p class="text-center">We'd love to hear from you. Please fill out the form below to get in touch!</p>
+
+                    <!-- Display error/success message -->
+                    <c:if test="${not empty errorMessage}">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            ${errorMessage}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </c:if>
+
+                    <c:if test="${not empty successMessage}">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            ${successMessage}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </c:if>
                     
-                    <form action="${pageContext.request.contextPath}/submitContact" method="post">
+                    <form action="${pageContext.request.contextPath}/contact/submitContact" method="post">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -79,8 +95,7 @@
         </div>
     </div>
 
-    <!-- Load Popper.js and Bootstrap 5 JS from CDN -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- Load Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
